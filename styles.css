@@ -267,16 +267,13 @@ body {
 /* Модальное окно и форма обратной связи */
 .modal {
     display: none;
-    /* Скрыто по умолчанию */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    /* Полупрозрачный фон */
     z-index: 1000;
-    /* Перекрывает все элементы */
     justify-content: center;
     align-items: center;
 }
@@ -364,6 +361,14 @@ body {
     text-decoration: underline;
 }
 
+.mobile-only {
+    display: none;
+}
+
+.nav-links {
+    display: none;
+}
+
 /* Адаптив */
 @media (max-width: 960px) {
     .center {
@@ -371,8 +376,76 @@ body {
     }
 
     .nav-links {
-        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 1000;
+        border-radius: 10px;
     }
+
+    .nav-links.active {
+        display: flex;
+        transform: translateY(0);
+    }
+
+    .menu-header {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        right: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-close-button {
+        font-size: 24px;
+        color: #B9B9B9;
+        cursor: pointer;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+
+    }
+
+    .nav-links a {
+        font-size: 18px;
+
+    }
+
+    .chevron {
+        display: none;
+
+    }
+
+    .callback.mobile-only {
+        position: absolute;
+        bottom: 20px;
+        width: 210px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: block;
+        padding: 10px;
+        background-color: #EAB308;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        font-weight: bold;
+        font-family: Inter;
+    }
+
+
 
     .hamburger {
         display: block;
@@ -380,6 +453,7 @@ body {
         padding: 5px 11px;
         border: 1px solid #FFDD55;
         border-radius: 10px;
+        cursor: pointer;
     }
 
     .duck-image {
@@ -479,5 +553,7 @@ body {
         left: 0;
     }
 
-
+    .callback {
+        display: none;
+    }
 }
