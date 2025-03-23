@@ -40,35 +40,38 @@
             <div class="yellow-circle">КРЯ</div>
             <img src="./img/duck.svg" alt="Rubber Duck" class="duck-image">
         </div>
-        <div class="slogan-box"><span class="slogan-box-text">Маленький друг найдётся для каждого в этом крошечном мире</span>
-            <button class="view-ducks">Смотреть уточек</button></div>
-        
+        <div class="slogan-box">
+            <span class="slogan-box-text">Маленький друг найдётся для каждого в этом крошечном мире</span>
+            <button class="view-ducks">Смотреть уточек</button>
+        </div>
     </section>
 
     <!-- Навигация с категориями -->
     <nav class="categories center">
         <ul>
-            <li>
-                <div class="arrow">→</div><a href="#">Классические</a>
-            </li>
-            <li>
-                <div class="arrow">→</div><a href="#">Уточки панки</a>
-            </li>
-            <li>
-                <div class="arrow">→</div><a href="#">Супергерои</a>
-            </li>
-            <li>
-                <div class="arrow">→</div><a href="#">Милые</a>
-            </li>
-            <li>
-                <div class="arrow">→</div><a 
-            href="#">Для детей</a>
-        </li>
-            <li>
-                <div class="arrow">→</div><a href="#">Взрослым</a>
-            </li>
+            <li><div class="arrow">→</div><a href="#">Классические</a></li>
+            <li><div class="arrow">→</div><a href="#">Уточки панки</a></li>
+            <li><div class="arrow">→</div><a href="#">Супергерои</a></li>
+            <li><div class="arrow">→</div><a href="#">Милые</a></li>
+            <li><div class="arrow">→</div><a href="#">Для детей</a></li>
+            <li><div class="arrow">→</div><a href="#">Взрослым</a></li>
         </ul>
     </nav>
+
+    <!-- Модальное окно с формой обратной связи -->
+    <div class="modal" id="callbackModal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <form class="callback-form">
+                <label for="name">ИМЯ <span class="required">*</span></label>
+                <input type="text" id="name" placeholder="Введите ваше имя" required>
+                <label for="phone">ТЕЛЕФОН <span class="required">*</span></label>
+                <input type="tel" id="phone" placeholder="+7 000 000 00 00" required>
+                <button type="submit">ОТПРАВИТЬ</button>
+                <p>Нажимая кнопку “Отправить”, вы соглашаетесь с <a href="#">политикой конфиденциальности</a>  и <a href="#">договором оферты</a></p>
+            </form>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

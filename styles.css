@@ -70,8 +70,6 @@ body {
     font-weight: 500;
     outline: none;
     font-family: Inter;
-
-
 }
 
 .nav-links a:focus {
@@ -184,9 +182,8 @@ body {
     transform: rotate(-25deg);
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
-    border-left: 20px solid #FFC107;/
+    border-left: 20px solid #FFC107;
 }
-
 
 .hero p {
     font-size: 18px;
@@ -221,13 +218,10 @@ body {
     margin-top: 8px;
 }
 
-
-
 /* Categories Navigation */
 .categories {
     width: 100%;
     margin-top: 20px;
-
 }
 
 .categories ul {
@@ -252,7 +246,6 @@ body {
 .categories a:hover {
     text-decoration: none;
     color: #2581EB;
-
 }
 
 .categories a:focus {
@@ -261,7 +254,107 @@ body {
     color: #2581EB;
 }
 
-/* Media Queries for Responsiveness */
+/* Модальное окно и форма обратной связи */
+.modal {
+    display: none;
+    /* Скрыто по умолчанию */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Полупрозрачный фон */
+    z-index: 1000;
+    /* Перекрывает все элементы */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #FFF;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 40px;
+    width: 417px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #B9B9B9;
+
+    cursor: pointer;
+}
+
+.callback-form label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #000;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.callback-form .required {
+    color: red;
+}
+
+.callback-form input {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+.callback-form input::placeholder {
+    color: #999;
+}
+
+.callback-form button {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #EAB308;
+    color: #FFF;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.callback-form p {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: black;
+    text-align: center;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.callback-form p a {
+    color: #2581EB;
+    text-decoration: none;
+}
+
+.callback-form p a:hover {
+    text-decoration: underline;
+}
+
+/* Адаптив */
 @media (max-width: 1248px) {
     .center {
         margin-left: auto;
@@ -354,37 +447,5 @@ body {
 
     .categories li {
         margin: 10px 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .duck-container {
-        height: 200px;
-    }
-
-    .duck-image {
-        width: 200px;
-        height: 200px;
-    }
-
-    .hero-leftText {
-        font-size: 50px;
-    }
-
-    .hero-rightText {
-        font-size: 40px;
-        top: 80px;
-    }
-
-    .yellow-circle {
-        width: 40px;
-        height: 40px;
-        font-size: 12px;
-    }
-
-    .callback,
-    .view-ducks {
-        font-size: 12px;
-        padding: 6px 12px;
     }
 }
