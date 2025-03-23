@@ -9,8 +9,8 @@ body {
 }
 
 .center {
-    margin-left: calc(50% - 624px);
-    margin-right: calc(50% - 624px);
+    margin-left: auto;
+    margin-right: auto;
     max-width: 1250px;
 }
 
@@ -107,8 +107,6 @@ body {
 
 .hamburger {
     display: none;
-    font-size: 24px;
-    cursor: pointer;
 }
 
 /* Hero Section */
@@ -142,6 +140,10 @@ body {
     color: #1E1E1E;
     top: 50px;
     left: 5px;
+}
+
+.hero-leftText-add {
+    display: none;
 }
 
 .hero-rightText {
@@ -227,6 +229,7 @@ body {
 .categories ul {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     list-style: none;
 }
 
@@ -355,97 +358,55 @@ body {
 }
 
 /* Адаптив */
-@media (max-width: 1248px) {
+@media (max-width: 960px) {
     .center {
-        margin-left: auto;
-        margin-right: auto;
-        padding: 0 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    .header {
-        flex-wrap: wrap;
-        padding-bottom: 20px;
+        padding: 0 16px;
     }
 
     .nav-links {
         display: none;
-        width: 100%;
-        flex-direction: column;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        background: #FFF;
-        padding: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
     }
 
     .hamburger {
         display: block;
-    }
-
-    .cart {
-        margin-left: auto;
-    }
-
-    .hero {
-        padding: 100px 0 30px;
-    }
-
-    .duck-container {
-        height: 300px;
+        margin-left: 20px;
+        padding: 5px 11px;
+        border: 1px solid #FFDD55;
+        border-radius: 10px;
     }
 
     .duck-image {
-        width: 300px;
-        height: 300px;
-        left: 50%;
-        transform: translateX(-50%) rotate(-180deg);
-        top: -30%;
-    }
-
-    .hero-leftText {
-        font-size: 80px;
-        top: 20px;
-        left: 20px;
-    }
-
-    .hero-rightText {
-        font-size: 60px;
-        top: 100px;
-        right: 20px;
+        width: 577px;
+        height: 577px;
+        position: absolute;
+        top: 3%;
+        left: 66%;
     }
 
     .yellow-circle {
-        width: 60px;
-        height: 60px;
-        font-size: 16px;
-        top: 20px;
-        left: 70%;
+        left: 63%;
     }
 
-    .hero p {
-        font-size: 14px;
+    .hero-rightText {
+        display: none;
+
     }
 
-    .view-ducks {
-        padding: 8px 16px;
+    .hero-leftText {
+        text-align: left;
+        line-height: 80%;
     }
 
-    .categories ul {
-        flex-wrap: wrap;
+    .hero-leftText-add {
+        display: inline-block;
     }
 
-    .categories li {
-        margin: 10px 15px;
+    .slogan-box {
+        left: 3%;
+        top: 55%;
     }
+    .categories ul{
+        justify-content: space-between;
+    }
+
 }
